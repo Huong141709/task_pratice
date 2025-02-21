@@ -2,9 +2,14 @@
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Trang web của tôi</title>
     <link rel="stylesheet" href="style.css">
+    <link href="data.js">
 </head>
 <body>
     <header class="header">
@@ -23,23 +28,22 @@
       <img src="Image/banner.png" alt="Banner">
   </div>
   <div id="container">
-    <table>
+    <table class="address-row">
       <tr>
-        <td><input id="keyword" placeholder="Nhập vị trí hoặc từ khóa" type="text"></td>
-        <td>
-          <select id="address" name="carlist">
-            <option value="volvo">Đà Nẵng</option>
-            <option value="saab">Hà Nội</option>
-            <option value="opel">Hồ Chí Minh</option>
-            <option value="audi">Cần Thơ</option>
-            <option value="audi">Huế</option>
+        <td >
+          <input id="keyword" placeholder="Nhập vị trí hoặc từ khóa" type="text">
+          <select id="address" >
+            <option >Đà Nẵng</option>
+            <option >Hà Nội</option>
+            <option >Hồ Chí Minh</option>
+            <option >Cần Thơ</option>
+            <option >Huế</option>
           </select>
         </td>
         <td><button type="button" id="search">Tìm kiếm</button></td>
+        <td></td>
       </tr>
     </table>
-  
-   
     <table class="highlight-row">
       <tr>
         <th>Đề xuất:</th>
@@ -51,6 +55,161 @@
         <td>Back-End</td>
       </tr>
     </table>
+    <div class="job-title">
+      <div class="title">
+        <img src="Image/Frame 3146.png" alt="Job">
+        <h2>Jobs tốt nhất</h2>
+      </div>
+      <div class="see-all">
+        Xem Tất Cả
+      </div>
+    </div>
+    <div id="list" class="container-fluid">
+      <div class="row" id="row-container">
+      </div>
+    </div>
+    
+    <script >
+      const data = [
+      {
+      id: 1,
+      logo: "Image\\Content\\logo1.png",
+      description: "Data Engineer",
+      location: "New York, NY",
+      timeWork: "Full-time",
+      bonus: "50,000,000 vnd",
+      salary: "$80,000",
+      commission: "12,000,000 vnd",
+      jobType: "Office",
+    },
+    {
+      id: 2,
+      logo: "Image\\Content\\logo2.png",
+      description: "Data Scientist",
+      location: "San Francisco, CA",
+      timeWork: "Part-time",
+      bonus: "30,000,000 vnd",
+      salary: "$60,000",
+      commission: "10,000,000 vnd",
+      jobType: "Online",
+    },
+    {
+      id: 3,
+      logo: "Image\\Content\\logo3.png",
+      description: "Data Analyst",
+      location: "Seattle, WA",
+      timeWork: "Contract",
+      bonus: "20,000,000 vnd",
+      salary: "$50,000",
+      commission: "8,000,000 vnd",
+      jobType: "Office",
+    },
+    {
+      id: 4,
+      logo: "Image\\Content\\logo4.png",
+      description: "Data Engineer",
+      location: "New York, NY",
+      timeWork: "Full-time",
+      bonus: "50,000,000 vnd",
+      salary: "$80,000",
+      commission: "12,000,000 vnd",
+      jobType: "WFH",
+    },
+    {
+      id: 5,
+      logo: "Image\\Content\\logo5.png",
+      description: "Data Scientist",
+      location: "San Francisco, CA",
+      timeWork: "Part-time",
+      bonus: "30,000,000 vnd",
+      salary: "$60,000",
+      commission: "10,000,000 vnd",
+      jobType: "Remote",
+    },
+    {
+      id: 6,
+      logo: "Image\\Content\\logo6.png",
+      description: "Data Analyst",
+      location: "Seattle, WA",
+      timeWork: "Contract",
+      bonus: "20,000,000 vnd",
+      salary: "$50,000",
+      commission: "8,000,000 vnd",
+      jobType: "Location",
+    },
+    {
+      id: 7,
+      logo: "Image\\Content\\logo2.png",
+      description: "Data Engineer",
+      location: "New York, NY",
+      timeWork: "Full-time",
+      bonus: "50,000,000 vnd",
+      salary: "$80,000",
+      commission: "12,000,000 vnd",
+      jobType: "Onboard",
+    },
+    {
+      id: 8,
+      logo: "Image\\Content\\logo6.png",
+      description: "Data Scientist",
+      location: "San Francisco, CA",
+      timeWork: "Part-time",
+      bonus: "30,000,000 vnd",
+      salary: "$60,000",
+      commission: "10,000,000 vnd",
+      jobType: "Online",
+    },
+    {
+      id: 9,
+      logo: "Image\\Content\\logo4.png",
+      description: "Data Analyst",
+      location: "Seattle, WA",
+      timeWork: "Contract",
+      bonus: "20,000,000 vnd",
+      salary: "$50,000",
+      commission: "8,000,000 vnd",
+      jobType: "Remote",
+    }
+      ];
+    
+      window.onload = () => {
+            const jobList = document.getElementById("row-container");
+
+            jobList.innerHTML = data
+                .map(
+                    (item) => `
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-3">
+                            <div class="job-info">
+                              <div class="title-logo">
+                                <img src="${item.logo}" alt="Company Logo">
+                                 <p id="job-dec">${item.description}</p>
+                                 </div>
+                                 <p id ="time-work">${item.timeWork}</p>
+                              </div>
+                                <p id ="salary"> ${item.salary}</p>
+                            <div>
+                              <div class="job-info">
+                                <p><strong>Hoa hồng </strong> ${item.commission}</p>
+                                <p><strong>Thưởng</strong> ${item.bonus}</p>
+                              </div>
+                              <div class="type-location">
+                                <p id ="job-type">${item.jobType}</p>
+                                <p id ="location">${item.location}</p>
+                                 <p id ="premium">PREMIUM</p>
+                              </div>
+
+                          </div>
+                        </div>
+                            
+                           
+                            
+                        </div>
+                    </div>`
+                )
+                .join("");
+        };
+    </script>    
   </div>
   
 </body>
