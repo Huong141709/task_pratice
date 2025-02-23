@@ -64,11 +64,81 @@
         Xem Tất Cả
       </div>
     </div>
-    <div id="list" class="container-fluid">
-      <div class="row" id="row-container">
+    <div class="container-fluid">
+      <div class="row" id="row-list">
       </div>
     </div>
-    
+    <div class="container-fluid" style="text-align: center; color:#021A84; ">
+        <p style="top: 20px;position: relative;">Why</p>
+      <h2>Tại Sao Lựa Chọn Recland?</h2>
+      <div class="row">
+        <div class="col-sm-4" style="color:#2ADA66;background: #aaf0c2; "> 
+          <p><img src="Image/Search.png" alt="Image"></p>
+          <h3>
+            Đa dạng việc làm, thêm nhiều lựa chọn hấp dẫn
+          </h3>
+          <p>Hơn 200+ việc làm IT, giúp các bạn REC có một kho việc làm để các bạn tìm kiếm, sale jobs đến những ứng viên phù hợp.</p>
+        
+        </div>
+        <div class="col-sm-4" style="color:#021A84;background:#9aa3ce ">
+          <p><img src="Image/Dollar.png" alt="Image"></p>
+          <h3>
+            Cơ chế hoa hồng hấp dẫn, rõ ràng và minh bạch
+          </h3>
+          <p>RecLand đem đến cho các bạn REC mức hoa hồng hấp dẫn, giúp cho các bạn REC có được mức thu nhập tương xứng mà không cần đến công ty làm việc</p>
+        
+        </div>
+        <div class="col-sm-4" style="color:#E5532A;background: #f5baaa;">
+          <p><img src="Image/Network.png" alt="Image"></p>
+          <h3>
+            Mở rộng network và học hỏi từ cộng đồng
+          </h3>
+          <p>RecLand cũng thường xuyên tổ chức những buổi chia sẻ, buổi offline nhằm giúp các bạn REC trau dồi, học hỏi và mở rộng được network trong lĩnh vực tuyển dụng.</p>
+        </div>
+      </div>
+      <h2>Đối Tác</h2>
+      <div>
+        <table class="logo-client">
+          <tr>
+            <td><img src="Image/Content/unsplash_ljgDHg9H1pY (1).png"></td>
+            <td><img src="Image\Content\unsplash_ljgDHg9H1pY (2).png"></td>
+            <td><img src="Image/Content/unsplash_ljgDHg9H1pY (3).png"></td>
+            <td><img src="Image/Content/unsplash_ljgDHg9H1pY (4).png"></td>
+            <td><img src="Image/Content/unsplash_ljgDHg9H1pY (5).png"></td>
+          </tr>
+        </table>
+      </div>
+      <p style="top: 20px;position: relative;">Quy trình làm việc </p>
+      <h2>Hợp tác cùng RecLand</h2>
+      <div>
+        <table class="work-flow">
+          <tr class="header-row">
+            <td><p>2</p></td>
+            <td><p>1</p></td>
+            <td><p>3</p></td>
+          </tr>
+      
+          <tr class="image-row">
+            <td><img src="Image/Add.png"></td>
+            <td><img src="Image/Search.png"></td>
+            <td><img src="Image/Shield.png"></td>
+          </tr>
+      
+          <tr class="short-description">
+            <td>Tạo một tài khoản</td>
+            <td>Tìm kiếm công việc</td>
+            <td>Giới thiệu ứng viên</td>
+          </tr>
+      
+          <tr class="detailed-description">
+            <td>Trở thành member trên RecLand</td>
+            <td>Tìm kiếm công việc phù hợp để mời ứng viên</td>
+            <td>Giới thiệu ứng viên vào các vị trí đang tuyển, </br>process ứng viên và nhận kết quả</td>
+          </tr>
+        </table>
+      </div> 
+
+    </div>
     <script >
       const data = [
       {
@@ -173,8 +243,7 @@
       ];
     
       window.onload = () => {
-            const jobList = document.getElementById("row-container");
-
+            const jobList = document.getElementById("row-list");
             jobList.innerHTML = data
                 .map(
                     (item) => `
@@ -201,16 +270,33 @@
 
                           </div>
                         </div>
-                            
-                           
-                            
                         </div>
                     </div>`
                 )
                 .join("");
         };
-    </script>    
+    </script>   
+
   </div>
-  
+  <footer class="footer">
+      <div class="footer-title">
+        <div>
+          <img src="Image/Frame 3146.png" alt="Job">
+          <table>
+            <tr><td><h2>Bạn muốn đến với Recland</h2></td></tr>
+            <tr><td>Chúng tôi sẽ giúp bạn thành công trên con đường Recer</td></tr>
+          </table>
+        </div>
+        <div class="register-now">
+          <p>Đăng ký ngay</p>
+        </div>
+      </div>
+      <div>
+        <table>
+          <tr><td><h2>Bạn muốn đến với Recland</h2></td></tr>
+          <tr><td>Chúng tôi sẽ giúp bạn thành công trên con đường Recer</td></tr>
+        </table>
+      </div>
+  </footer>
 </body>
 </html>

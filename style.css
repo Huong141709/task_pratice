@@ -180,7 +180,7 @@ body {
 }
 .title-logo {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
   width: auto;
   height: auto;
@@ -198,14 +198,14 @@ body {
   line-height: 16px;
 }
 #time-work {
-  color: #021A84;
-    background-color: #E5E5E5;
-    border-radius: 8px;
-    width: 70px;
-    height: 25px;
-    text-align: center;
+  color: #021a84;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  width: 70px;
+  height: 25px;
+  text-align: center;
 }
-#salary{
+#salary {
   position: absolute;
   top: 40px;
   left: 70px;
@@ -215,48 +215,218 @@ body {
   line-height: 16px;
 }
 .job-info strong {
-  color: #021A84; 
-  font-size: 13px; 
-
+  color: #021a84;
+  font-size: 13px;
 }
 
 #job-type {
-  color: #021A84;
-    background-color: #E5E5E5;
-    border-radius: 8px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    padding: 5px;
-    font-size: 13px;
+  color: #021a84;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
 }
 #location {
-  color: #021A84;
-    background-color: #E5E5E5;
-    border-radius: 8px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    padding: 5px;
-    font-size: 13px;
+  color: #021a84;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
 }
 .type-location {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 20px;
-
 }
 
 #premium {
   font-weight: bold;
-  color: white; 
-  background: #FE4C4C;
+  color: white;
+  background: #fe4c4c;
   border-radius: 8px;
   position: absolute;
   right: 20px;
   padding: 5px;
   font-size: 13px;
 }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.col-sm-4 {
+  flex: 1;
+  max-width: 30%;
+  padding: 10px;
+  background: #fe4c4c;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+}
+.logo-client {
+  width: 1020px;
+  margin: auto;
+  border-spacing: 10px;
+  text-align: center;
+}
+
+.logo-client img {
+  width: 140px;
+  height: 140px;
+  gap: 10px;
+  border-radius: 8px;
+
+  background: #c4c4c4;
+}
+.work-flow {
+  margin: auto;
+  border-collapse: collapse;
+}
+.work-flow td {
+  padding: 0 130px; 
+}
+.work-flow img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: auto; 
+}
+
+.work-flow {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.work-flow td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+}
+
+.header-row p {
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #999999;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.image-row img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: auto;
+}
+
+.short-description td {
+  font-weight: bold;  
+  font-style: normal; 
+  color: black; 
+}
+
+.detailed-description {
+  font-size: 16px;
+  color: black;
+}
+.short-description {
+  font-style: italic;
+  color: #6c757d;
+}
+
+.detailed-description {
+  font-size: 14px;
+}
+
+.work-flow img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: auto;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(220.53deg, #0CC64B 0%, #26AB5B 76.95%);
+  width: 1160px;
+height: 119px;
+border-radius: 20px;
+
+
+}
+
+.footer-title > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.footer-title img {
+  width: auto;
+height: auto ;
+}
+
+.footer-title h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+.footer-title td {
+  font-size: 13px;
+  color: white;
+  margin: 0;
+}
+.register-now {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  background-color: #57d482;
+  width: 153px;
+  height: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 8px 8px 0;
+}
+.register-now p {
+  background: #021A84;
+  width: 153;
+  height: 44;
+  gap: 10px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  
+} 
 
 
 
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-sm-4 {
+    max-width: 100%;
+  }
+}
