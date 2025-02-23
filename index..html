@@ -64,10 +64,7 @@
         Xem Tất Cả
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row" id="row-list">
-      </div>
-    </div>
+    <div id="row-list"></div>
     <div class="container-fluid" style="text-align: center; color:#021A84; ">
         <p style="top: 20px;position: relative;">Why</p>
       <h2>Tại Sao Lựa Chọn Recland?</h2>
@@ -247,35 +244,40 @@
             jobList.innerHTML = data
                 .map(
                     (item) => `
-                    <div class="col-md-4 mb-4">
-                        <div class="card p-3">
-                            <div class="job-info">
-                              <div class="title-logo">
-                                <img src="${item.logo}" alt="Company Logo">
-                                 <p id="job-dec">${item.description}</p>
-                                 </div>
-                                 <p id ="time-work">${item.timeWork}</p>
-                              </div>
-                                <p id ="salary"> ${item.salary}</p>
-                            <div>
-                              <div class="job-info">
-                                <p><strong>Hoa hồng </strong> ${item.commission}</p>
-                                <p><strong>Thưởng</strong> ${item.bonus}</p>
-                              </div>
-                              <div class="type-location">
-                                <p id ="job-type">${item.jobType}</p>
-                                <p id ="location">${item.location}</p>
-                                 <p id ="premium">PREMIUM</p>
-                              </div>
-
-                          </div>
+                    <div class="card">
+                        <div class="title-logo">
+                            <div class="job-content">
+                              <table>
+                                <tr>
+                                  <td><img src="${item.logo}" alt="Company Logo"></td>
+                                  <td><strong>${item.description}</strong></td>
+                                </tr>
+                                <tr><td><p>&nbsp;</p></td><td style="font-size: 18px;position: absolute;top:20%;"><p> ${item.salary}</p></td>
+                                </tr>
+                              </table>
+                            </div>
+                            <p class="time-work">${item.timeWork}</p>
                         </div>
+                        
+                        <div class="bonus-commission">
+                            <p style=" color: #021a84;"><strong>Hoa hồng</strong> </p>
+                            <p style=" color: #021a84;"><strong>Thưởng</strong> </p>
+                        </div>
+                        <div class="bonus-commission">
+                            <p> ${item.commission}</p>
+                            <p> ${item.bonus}</p>
+                        </div>
+                        <div class="type-location">
+                            <p style=" color: #021a84;   background-color: #e5e5e5;   border-radius: 8px;   width: auto;   height: auto;">${item.jobType}</p>
+                            <p style=" color: #021a84;   background-color: #e5e5e5;   border-radius: 8px;   width: auto;   height: auto;">${item.location}</p>
+                            <p id="premium">PREMIUM</p>
                         </div>
                     </div>`
                 )
                 .join("");
         };
-    </script>   
+    </script>
+ 
 
   </div>
   <footer class="footer">
