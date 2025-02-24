@@ -227,18 +227,6 @@ body {
   color: #ff5733;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .card {
-      flex: 1 1 calc(50% - 16px);
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-      flex: 1 1 100%;
-  }
-}
 .row {
   display: flex;
   justify-content: space-between;
@@ -499,15 +487,4 @@ body {
 .footer-box img {
   max-width: 100%;
   height: auto;
-}
-
-
-
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-  }
-  .col-sm-4 {
-    max-width: 100%;
-  }
 }
