@@ -335,14 +335,13 @@ body {
 .footer {
   display: flex;
   flex-direction: column; 
-  align-items: center; 
   gap: 20px; 
   padding: 40px 50px 40px 50px;
 }
 
 .footer-title {
   display: table;
-  width: 1220px;
+  width: auto;
   height: 119px;
   border-radius: 20px;
   background: linear-gradient(220.53deg, #0CC64B 0%, #26AB5B 76.95%);
