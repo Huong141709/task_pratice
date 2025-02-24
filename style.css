@@ -490,3 +490,13 @@ body {
   max-width: 100%;
   height: auto;
 }
+.footer-logo{
+  text-align: right;
+}
+ .footer-logo button{
+  background: none;
+  border: none;
+}
+.footer-copyright{
+  text-align: center;
+}
